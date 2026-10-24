@@ -1,0 +1,6 @@
+step,rows,dropped,dropped_share_of_previous,remaining_share_of_input
+matched input,1445608,0,,1.0
+"Date received in [2018-01-01, 2023-12-31]",1445608,0,0.0,1.0
+"label known (drop In progress, Untimely response, missing)",1442783,2825,0.001954,0.998046
+text >= 50 chars after removing masks,1429846,12937,0.008967,0.989097
+unique Complaint ID,1429846,0,0.0,0.989097

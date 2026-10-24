@@ -1,0 +1,22 @@
+{
+  "split_dates": {
+    "train_start": "2018-01-01",
+    "train_end": "2021-12-31",
+    "val_start": "2022-01-01",
+    "val_end": "2022-12-31",
+    "test_start": "2023-01-01",
+    "test_end": "2023-12-31"
+  },
+  "rows_outside_windows": 0,
+  "exact_dup_groups_with_mixed_labels": 178,
+  "near_dup_definition": {
+    "shingle_words": 5,
+    "jaccard_threshold": 0.8,
+    "num_perm": 128,
+    "bands": 16,
+    "rows_per_band": 8,
+    "max_ref_per_bucket": 5,
+    "verification": "exact Jaccard on shingle sets"
+  },
+  "output": "data/processed/modeling.parquet"
+}

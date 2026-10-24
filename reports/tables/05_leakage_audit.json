@@ -1,0 +1,63 @@
+{
+  "test_rows_loaded": 0,
+  "train_rows": 507835,
+  "val_rows": 233317,
+  "models": {
+    "structured": {
+      "features": [
+        "product",
+        "sub_product",
+        "issue",
+        "sub_issue"
+      ],
+      "forbidden_used": [],
+      "not_in_allow_list": [],
+      "passed": true
+    },
+    "tfidf": {
+      "features": [
+        "text"
+      ],
+      "forbidden_used": [],
+      "not_in_allow_list": [],
+      "passed": true
+    },
+    "tfidf_structured": {
+      "features": [
+        "text",
+        "product",
+        "sub_product",
+        "issue",
+        "sub_issue"
+      ],
+      "forbidden_used": [],
+      "not_in_allow_list": [],
+      "passed": true
+    },
+    "tfidf_structured_company": {
+      "features": [
+        "text",
+        "product",
+        "sub_product",
+        "issue",
+        "sub_issue",
+        "company"
+      ],
+      "forbidden_used": [],
+      "not_in_allow_list": [],
+      "passed": true
+    },
+    "tfidf_structured_masked": {
+      "features": [
+        "text_masked",
+        "product",
+        "sub_product",
+        "issue",
+        "sub_issue"
+      ],
+      "forbidden_used": [],
+      "not_in_allow_list": [],
+      "passed": true
+    }
+  }
+}

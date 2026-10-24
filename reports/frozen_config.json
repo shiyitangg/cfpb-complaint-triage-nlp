@@ -1,0 +1,99 @@
+{
+  "selected_on": "validation 2022",
+  "setting": "main",
+  "primary_model": "tfidf_structured",
+  "cost_model": {
+    "description": "illustrative operational cost units, not dollars",
+    "c_fp": 1.0,
+    "ratios": [
+      5,
+      10,
+      20
+    ],
+    "primary_ratio": 10,
+    "reviewed_true_positive_cost": 0
+  },
+  "capacities": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "models": {
+    "structured": {
+      "model_path": "models/structured.joblib",
+      "cost_thresholds": {
+        "5": 0.17228167980973147,
+        "10": 0.1000666015892097,
+        "20": 0.0634563312050336
+      },
+      "capacity_thresholds": {
+        "0.05": 0.2606730141430014,
+        "0.1": 0.14572994007645443,
+        "0.2": 0.05489070106774949,
+        "0.3": 0.015491828180244815
+      },
+      "C": 0.25
+    },
+    "tfidf": {
+      "model_path": "models/tfidf.joblib",
+      "cost_thresholds": {
+        "5": 0.12780570607562727,
+        "10": 0.07682387110760516,
+        "20": 0.0457595729112825
+      },
+      "capacity_thresholds": {
+        "0.05": 0.2216818153462285,
+        "0.1": 0.11526358233409206,
+        "0.2": 0.03988454281619916,
+        "0.3": 0.01598207855951644
+      },
+      "C": 1.0
+    },
+    "tfidf_structured": {
+      "model_path": "models/tfidf_structured.joblib",
+      "cost_thresholds": {
+        "5": 0.14785278932851523,
+        "10": 0.07924310776844501,
+        "20": 0.05176865373636258
+      },
+      "capacity_thresholds": {
+        "0.05": 0.2388592973452905,
+        "0.1": 0.12245403370717996,
+        "0.2": 0.03655981877421066,
+        "0.3": 0.01103097738219471
+      },
+      "C": 1.0
+    },
+    "tfidf_structured_company": {
+      "model_path": "models/tfidf_structured_company.joblib",
+      "cost_thresholds": {
+        "5": 0.1406764617350757,
+        "10": 0.08763588368958904,
+        "20": 0.044417098343165776
+      },
+      "capacity_thresholds": {
+        "0.05": 0.24234492676807182,
+        "0.1": 0.12738931485719557,
+        "0.2": 0.03259778207491801,
+        "0.3": 0.009121175343049128
+      },
+      "C": 0.25
+    },
+    "tfidf_structured_masked": {
+      "model_path": "models/tfidf_structured_masked.joblib",
+      "cost_thresholds": {
+        "5": 0.1477198409344276,
+        "10": 0.0854432859904642,
+        "20": 0.04585823367002735
+      },
+      "capacity_thresholds": {
+        "0.05": 0.2416781276331743,
+        "0.1": 0.1304931778826942,
+        "0.2": 0.04035158232825683,
+        "0.3": 0.01188449089081913
+      },
+      "C": 1.0
+    }
+  }
+}

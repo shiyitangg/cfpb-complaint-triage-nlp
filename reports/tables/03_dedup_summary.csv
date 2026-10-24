@@ -1,0 +1,4 @@
+split,rows_before,exact_dup_removed,of_which_first_copy_in_earlier_split,rows_after_exact_dedup,near_dup_of_train,near_dup_of_val,near_dup_of_train_share,near_dup_of_val_share,rows_main
+train,612715,104880,0,507835,0,0,0.0,0.0,507835
+val,334562,101245,11360,233317,2638,0,0.011307,0.0,230679
+test,482569,190364,58433,292205,1149,17544,0.003932,0.06004,291056

@@ -1,0 +1,241 @@
+model,direction,rank,term,coef
+tfidf,positive,1,00,7.53615998641437
+tfidf,positive,2,fee,7.042353315618987
+tfidf,positive,3,fees,6.724355695246027
+tfidf,positive,4,coinbase,6.581439707136764
+tfidf,positive,5,amerisave,6.416558526451666
+tfidf,positive,6,synchrony,5.557959835942629
+tfidf,positive,7,chase,5.232196868422751
+tfidf,positive,8,charged,4.925873482336944
+tfidf,positive,9,td,4.343521772551973
+tfidf,positive,10,paypal,4.302881149042412
+tfidf,positive,11,card,4.190584821104303
+tfidf,positive,12,charges,4.190389097047243
+tfidf,positive,13,refund,4.1190389271676375
+tfidf,positive,14,pennymac,4.0794149211371815
+tfidf,positive,15,bank of,4.063437374328886
+tfidf,positive,16,boa,4.02124357805385
+tfidf,positive,17,of america,3.996310588890925
+tfidf,positive,18,bofa,3.9617896703544626
+tfidf,positive,19,overdraft,3.9353927813733907
+tfidf,positive,20,charge,3.8456584502294135
+tfidf,positive,21,direct express,3.8200638341383346
+tfidf,positive,22,subscription,3.6150346079518836
+tfidf,positive,23,appraisal,3.58976108622031
+tfidf,positive,24,america,3.575259097335703
+tfidf,positive,25,interest,3.4938361900059944
+tfidf,positive,26,bonus,3.4035210100839466
+tfidf,positive,27,free credit,3.3908474534692057
+tfidf,positive,28,my account,3.198345769013303
+tfidf,positive,29,case,3.1026170145177008
+tfidf,positive,30,free,3.042655870698545
+tfidf,negative,1,equifax,-7.274323594730112
+tfidf,negative,2,debt,-6.508273193031834
+tfidf,negative,3,collection,-5.3392092975936425
+tfidf,negative,4,report,-5.297015659152666
+tfidf,negative,5,chime,-5.193414111309531
+tfidf,negative,6,reporting,-5.075427539580373
+tfidf,negative,7,bb,-4.714418501120002
+tfidf,negative,8,my credit,-4.515918949051272
+tfidf,negative,9,netspend,-4.3551060723714095
+tfidf,negative,10,cash app,-4.259079936246215
+tfidf,negative,11,experian,-4.125506753556676
+tfidf,negative,12,modification,-4.02633619812903
+tfidf,negative,13,inquiries,-3.888670558583202
+tfidf,negative,14,my report,-3.880041779871904
+tfidf,negative,15,credit report,-3.867151444178562
+tfidf,negative,16,hsbc,-3.804740321967525
+tfidf,negative,17,inquiry,-3.7947020206222266
+tfidf,negative,18,loancare,-3.6846110076286553
+tfidf,negative,19,servicing,-3.5771598147680357
+tfidf,negative,20,bureaus,-3.568453331733886
+tfidf,negative,21,cooper,-3.3621482872017427
+tfidf,negative,22,mr cooper,-3.292760807711111
+tfidf,negative,23,loan,-3.2721431167124995
+tfidf,negative,24,mortgage,-3.2608844335965754
+tfidf,negative,25,collections,-3.23804201052375
+tfidf,negative,26,freedom mortgage,-3.208842014423914
+tfidf,negative,27,freedom,-3.193867197272783
+tfidf,negative,28,name,-3.0864571653900366
+tfidf,negative,29,navient,-2.990008352942542
+tfidf,negative,30,the debt,-2.9661858918066715
+tfidf_structured,positive,1,00,5.936444304568693
+tfidf_structured,positive,2,amerisave,5.816479150425902
+tfidf_structured,positive,3,fee,5.5860328467965
+tfidf_structured,positive,4,coinbase,5.576733002936533
+tfidf_structured,positive,5,fees,4.984725690078801
+tfidf_structured,positive,6,synchrony,4.399608740178597
+tfidf_structured,positive,7,pennymac,4.2872342014913
+tfidf_structured,positive,8,paypal,4.046725918905601
+tfidf_structured,positive,9,td,3.895045818387265
+tfidf_structured,positive,10,chase,3.8751332549650535
+tfidf_structured,positive,11,of america,3.7738957014064205
+tfidf_structured,positive,12,bank of,3.7005585822675515
+tfidf_structured,positive,13,boa,3.61936926923539
+tfidf_structured,positive,14,bofa,3.554901892279542
+tfidf_structured,positive,15,america,3.3791484296393652
+tfidf_structured,positive,16,charged,3.331391764442861
+tfidf_structured,positive,17,direct express,3.205325615958942
+tfidf_structured,positive,18,appraisal,3.0128523403150775
+tfidf_structured,positive,19,premier student,3.0079740233937815
+tfidf_structured,positive,20,refund,2.8694462090603094
+tfidf_structured,positive,21,subscription,2.74879044430426
+tfidf_structured,positive,22,vw,2.7222571235467803
+tfidf_structured,positive,23,venmo,2.6966107955066128
+tfidf_structured,positive,24,free credit,2.652430446578327
+tfidf_structured,positive,25,blackhawk,2.6322093992022824
+tfidf_structured,positive,26,bluebird,2.6122018505793436
+tfidf_structured,positive,27,charges,2.611589623203989
+tfidf_structured,positive,28,loan center,2.607211519576641
+tfidf_structured,positive,29,case,2.605036164379718
+tfidf_structured,positive,30,transunion,2.5709769736637442
+tfidf_structured,negative,1,chime,-5.524757142110706
+tfidf_structured,negative,2,bb,-5.033873010534146
+tfidf_structured,negative,3,equifax,-5.009165559463555
+tfidf_structured,negative,4,netspend,-4.575630062668132
+tfidf_structured,negative,5,hsbc,-4.453283137871381
+tfidf_structured,negative,6,cash app,-4.401244194308016
+tfidf_structured,negative,7,debt,-4.063949773241784
+tfidf_structured,negative,8,freedom,-3.395272315115038
+tfidf_structured,negative,9,loancare,-3.298899533324853
+tfidf_structured,negative,10,freedom mortgage,-3.105124431315862
+tfidf_structured,negative,11,cashapp,-3.0335829475098675
+tfidf_structured,negative,12,cooper,-2.997088506256302
+tfidf_structured,negative,13,collection,-2.9557865774920034
+tfidf_structured,negative,14,mr cooper,-2.944988805992318
+tfidf_structured,negative,15,servicing,-2.865302935479739
+tfidf_structured,negative,16,reporting,-2.8596555298408757
+tfidf_structured,negative,17,bonus points,-2.6848532722283367
+tfidf_structured,negative,18,name,-2.6453274509673466
+tfidf_structured,negative,19,report,-2.6416437654285856
+tfidf_structured,negative,20,shellpoint,-2.6073041343114314
+tfidf_structured,negative,21,binance,-2.491555829689673
+tfidf_structured,negative,22,modification,-2.482246246378345
+tfidf_structured,negative,23,experian,-2.4118936410949985
+tfidf_structured,negative,24,zelle,-2.399916899872944
+tfidf_structured,negative,25,usaa,-2.39253130051113
+tfidf_structured,negative,26,my credit,-2.305071728909723
+tfidf_structured,negative,27,miles,-2.267529694320321
+tfidf_structured,negative,28,my report,-2.234723165995264
+tfidf_structured,negative,29,santander,-2.191485945035669
+tfidf_structured,negative,30,one bank,-2.1815940797384687
+tfidf_structured_company,positive,1,fee,4.540764059210192
+tfidf_structured_company,positive,2,00,4.3362433266614815
+tfidf_structured_company,positive,3,fees,3.7284997146313477
+tfidf_structured_company,positive,4,charged,2.6959732343386356
+tfidf_structured_company,positive,5,refund,2.4365098454324765
+tfidf_structured_company,positive,6,charges,2.0371537822202925
+tfidf_structured_company,positive,7,charge,1.8815322929385363
+tfidf_structured_company,positive,8,late fee,1.8011844180110779
+tfidf_structured_company,positive,9,subscription,1.7685643339795787
+tfidf_structured_company,positive,10,overdraft,1.6795832056603481
+tfidf_structured_company,positive,11,appraisal,1.6686898998738249
+tfidf_structured_company,positive,12,free,1.6392159504691979
+tfidf_structured_company,positive,13,refunded,1.583278036291825
+tfidf_structured_company,positive,14,my account,1.502410857870024
+tfidf_structured_company,positive,15,charging,1.4833249066555514
+tfidf_structured_company,positive,16,transunion,1.4065804872148409
+tfidf_structured_company,positive,17,check,1.3992448891682923
+tfidf_structured_company,positive,18,called,1.3755649601649427
+tfidf_structured_company,positive,19,late fees,1.3644213062254125
+tfidf_structured_company,positive,20,case,1.3581479348439582
+tfidf_structured_company,positive,21,bonus,1.3442582193431112
+tfidf_structured_company,positive,22,atm,1.3382283046601644
+tfidf_structured_company,positive,23,credited,1.2845825284062955
+tfidf_structured_company,positive,24,the atm,1.2576562318451054
+tfidf_structured_company,positive,25,cancelled,1.2541403661829396
+tfidf_structured_company,positive,26,free credit,1.2513796401093706
+tfidf_structured_company,positive,27,cancel,1.2321305667919518
+tfidf_structured_company,positive,28,to cancel,1.1970620348621828
+tfidf_structured_company,positive,29,at,1.187757064409895
+tfidf_structured_company,positive,30,00 bonus,1.1858385925176427
+tfidf_structured_company,negative,1,debt,-2.2387726080275656
+tfidf_structured_company,negative,2,name,-1.6373923423115604
+tfidf_structured_company,negative,3,my credit,-1.584184143958812
+tfidf_structured_company,negative,4,reporting,-1.4915972085382068
+tfidf_structured_company,negative,5,points,-1.3177406647686556
+tfidf_structured_company,negative,6,report,-1.3172405370330373
+tfidf_structured_company,negative,7,reason,-1.2580836840772573
+tfidf_structured_company,negative,8,miles,-1.2549029450945859
+tfidf_structured_company,negative,9,is,-1.2355799698245846
+tfidf_structured_company,negative,10,collection,-1.1631118535890441
+tfidf_structured_company,negative,11,credit report,-1.147407767705024
+tfidf_structured_company,negative,12,limit,-1.125985430924535
+tfidf_structured_company,negative,13,inquiry,-1.0570749900652092
+tfidf_structured_company,negative,14,the debt,-1.0523336195522244
+tfidf_structured_company,negative,15,bonus points,-1.0400887613601975
+tfidf_structured_company,negative,16,180 days,-1.031935519279708
+tfidf_structured_company,negative,17,one bank,-1.0240208783835263
+tfidf_structured_company,negative,18,modification,-0.9965002502752602
+tfidf_structured_company,negative,19,my name,-0.9896721578333535
+tfidf_structured_company,negative,20,years,-0.9814220653753507
+tfidf_structured_company,negative,21,bureaus,-0.973704957353094
+tfidf_structured_company,negative,22,accounts,-0.9490416256507793
+tfidf_structured_company,negative,23,rate,-0.9379474048318218
+tfidf_structured_company,negative,24,on my,-0.9254924786124414
+tfidf_structured_company,negative,25,court,-0.9194362054846631
+tfidf_structured_company,negative,26,hard,-0.9101222067109603
+tfidf_structured_company,negative,27,credit limit,-0.8972911320703271
+tfidf_structured_company,negative,28,360,-0.8931871855165315
+tfidf_structured_company,negative,29,law,-0.8485692542080999
+tfidf_structured_company,negative,30,180,-0.8458479449004982
+tfidf_structured_masked,positive,1,00,5.864518744420541
+tfidf_structured_masked,positive,2,fee,5.571504056918036
+tfidf_structured_masked,positive,3,fees,4.887871276524357
+tfidf_structured_masked,positive,4,charged,3.285585063781831
+tfidf_structured_masked,positive,5,appraisal,3.132125570839562
+tfidf_structured_masked,positive,6,application fee,2.9913405059656504
+tfidf_structured_masked,positive,7,subscription,2.988680405714934
+tfidf_structured_masked,positive,8,case,2.9886614933234865
+tfidf_structured_masked,positive,9,direct zzcompanyzz,2.9661862282485507
+tfidf_structured_masked,positive,10,bluebird,2.827373531087455
+tfidf_structured_masked,positive,11,free credit,2.8262093648362243
+tfidf_structured_masked,positive,12,refund,2.7478976177736865
+tfidf_structured_masked,positive,13,claim,2.734921282051134
+tfidf_structured_masked,positive,14,statement credit,2.4855583563536445
+tfidf_structured_masked,positive,15,overdraft,2.4282481579662503
+tfidf_structured_masked,positive,16,charges,2.407031200642002
+tfidf_structured_masked,positive,17,care credit,2.3924539679632244
+tfidf_structured_masked,positive,18,zzcompanyzz pro,2.3806209559511764
+tfidf_structured_masked,positive,19,34 00,2.3492779534194996
+tfidf_structured_masked,positive,20,with zzcompanyzz,2.347616744650372
+tfidf_structured_masked,positive,21,zzcompanyzz has,2.3140262326995944
+tfidf_structured_masked,positive,22,charge,2.274931335858308
+tfidf_structured_masked,positive,23,carecredit,2.24642141292861
+tfidf_structured_masked,positive,24,mac,2.204552678532727
+tfidf_structured_masked,positive,25,00 application,2.1756793342698786
+tfidf_structured_masked,positive,26,dollar,2.1540990758210303
+tfidf_structured_masked,positive,27,security fee,2.144841289805113
+tfidf_structured_masked,positive,28,dealer services,2.1117408638813733
+tfidf_structured_masked,positive,29,closing,2.0857117661484574
+tfidf_structured_masked,positive,30,the atm,2.079092042095109
+tfidf_structured_masked,negative,1,bb,-5.465327829753302
+tfidf_structured_masked,negative,2,debt,-4.134500521412382
+tfidf_structured_masked,negative,3,collection,-3.1699918019272375
+tfidf_structured_masked,negative,4,reporting,-3.095056914060101
+tfidf_structured_masked,negative,5,binance,-3.0650713807820695
+tfidf_structured_masked,negative,6,zelle,-2.7539165414192404
+tfidf_structured_masked,negative,7,report,-2.746624435477274
+tfidf_structured_masked,negative,8,bonus points,-2.705563589313024
+tfidf_structured_masked,negative,9,name,-2.686945368475839
+tfidf_structured_masked,negative,10,cooper,-2.682599862483161
+tfidf_structured_masked,negative,11,mr cooper,-2.6065215727572673
+tfidf_structured_masked,negative,12,square,-2.5354024424346897
+tfidf_structured_masked,negative,13,modification,-2.52678942992712
+tfidf_structured_masked,negative,14,miles,-2.3522311708795356
+tfidf_structured_masked,negative,15,my report,-2.336419161034914
+tfidf_structured_masked,negative,16,my bank,-2.3090134669804616
+tfidf_structured_masked,negative,17,my credit,-2.2482138851430955
+tfidf_structured_masked,negative,18,fortiva,-2.2183114485274107
+tfidf_structured_masked,negative,19,llc,-2.1747147739937867
+tfidf_structured_masked,negative,20,binance us,-2.1277535599841113
+tfidf_structured_masked,negative,21,the debt,-2.098298390982419
+tfidf_structured_masked,negative,22,zzcompanyzz llc,-2.096850793436043
+tfidf_structured_masked,negative,23,sls,-2.0844200155004335
+tfidf_structured_masked,negative,24,newrez,-2.080755654659072
+tfidf_structured_masked,negative,25,credit report,-2.0759916483391083
+tfidf_structured_masked,negative,26,inquiry,-2.0186052668078567
+tfidf_structured_masked,negative,27,points,-1.9756619214834736
+tfidf_structured_masked,negative,28,way2go,-1.9154694353697672
+tfidf_structured_masked,negative,29,servicing,-1.9115144730643379
+tfidf_structured_masked,negative,30,inquiries,-1.8985948071635905

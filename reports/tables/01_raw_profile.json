@@ -1,0 +1,43 @@
+{
+  "raw_file": "data/raw/complaints.csv.zip",
+  "file_size_bytes": 357730454,
+  "file_mtime_utc": "2026-10-23T19:25:46.364340+00:00",
+  "download_date_reported": "2026-10-23",
+  "last_modified_header": "Fri, 23 Oct 2026 09:15:52 GMT",
+  "n_rows": 18621136,
+  "columns_in_export": [
+    "Date received",
+    "Product",
+    "Sub-product",
+    "Issue",
+    "Sub-issue",
+    "Company public response",
+    "Company",
+    "State",
+    "ZIP code",
+    "Tags",
+    "Submitted via",
+    "Date sent to company",
+    "Company response to consumer",
+    "Timely response?",
+    "Complaint ID"
+  ],
+  "narrative_column_present": false,
+  "n_rows_with_narrative": null,
+  "n_unparsed_dates": 0,
+  "n_duplicate_complaint_ids": 0,
+  "date_received_min": "2011-12-01",
+  "date_received_max": "2026-10-23",
+  "date_received_max_with_narrative": null,
+  "response_categories": [
+    "<missing>",
+    "Closed",
+    "Closed with explanation",
+    "Closed with monetary relief",
+    "Closed with non-monetary relief",
+    "Closed with relief",
+    "Closed without relief",
+    "In progress",
+    "Untimely response"
+  ]
+}

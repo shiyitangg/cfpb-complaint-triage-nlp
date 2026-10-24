@@ -1,0 +1,71 @@
+{
+  "test_opened_at_utc": "2026-10-24T20:03:14.074747+00:00",
+  "config_sha256": "d992cc0dc1c40c8e3109cd79871665d0e9f91a074d2c3059e655054353987491",
+  "primary_model": "tfidf_structured",
+  "populations": {
+    "main": 291056,
+    "dedup_all": 292205,
+    "raw_queue": 482569
+  },
+  "primary_test_main": {
+    "model": "tfidf_structured",
+    "population": "main",
+    "n": 291056,
+    "positives": 12146,
+    "base_rate": 0.04173080094552251,
+    "pr_auc": 0.34239521596518385,
+    "precision@5pct": 0.36143750429464716,
+    "recall@5pct": 0.4330643833360777,
+    "lift@5pct": 8.661168635763447,
+    "precision@10pct": 0.2810417096131382,
+    "recall@10pct": 0.6734727482298699,
+    "lift@10pct": 6.734634927808459,
+    "precision@20pct": 0.1880196523053666,
+    "recall@20pct": 0.901119710192656,
+    "lift@20pct": 4.505536631104131,
+    "precision@30pct": 0.13402888326442733,
+    "recall@30pct": 0.9635270871068664,
+    "lift@30pct": 3.2117496004784423
+  },
+  "primary_test_main_cost_at_primary_ratio": {
+    "model": "tfidf_structured",
+    "population": "main",
+    "ratio": 10,
+    "threshold": 0.07924310776844501,
+    "reviewed": 42997,
+    "review_rate": 0.1477275850695399,
+    "tp": 9898,
+    "fp": 33099,
+    "fn": 2248,
+    "precision": 0.23020210712375283,
+    "recall": 0.8149184916845051,
+    "cost": 55579.0,
+    "baseline_review_none": 121460.0,
+    "baseline_review_all": 278910.0,
+    "saving_vs_best_baseline_pct": 0.5424090235468467
+  },
+  "pr_auc_by_model_and_population": {
+    "dedup_all": {
+      "structured": 0.23107335908207993,
+      "tfidf": 0.3347418332358118,
+      "tfidf_structured": 0.3423698065184722,
+      "tfidf_structured_company": 0.36403437784794274,
+      "tfidf_structured_masked": 0.31730647186505573
+    },
+    "main": {
+      "structured": 0.23110406672427214,
+      "tfidf": 0.33476595234292794,
+      "tfidf_structured": 0.34239521596518385,
+      "tfidf_structured_company": 0.36405863194076443,
+      "tfidf_structured_masked": 0.31733037340574005
+    },
+    "raw_queue": {
+      "structured": 0.22852956069087046,
+      "tfidf": 0.3329376088462831,
+      "tfidf_structured": 0.34105705883308945,
+      "tfidf_structured_company": 0.36293763127973366,
+      "tfidf_structured_masked": 0.3161163579131645
+    }
+  },
+  "cost_units": "illustrative, assumed; not dollars"
+}

@@ -1,0 +1,22 @@
+{
+  "archive_file": "data/archive/complaints_20251209.csv.zip",
+  "archive_url": "https://web.archive.org/web/20251209002532id_/https://files.consumerfinance.gov/ccdb/complaints.csv.zip",
+  "archive_sha256": "27350c1d6f297db7776851ebfa23caaedbc54dcc356e224d66e2cf5d41d2fba5",
+  "archive_rows": 12311715,
+  "archive_rows_with_narrative": 3551558,
+  "archive_narrative_date_min": "2015-03-19",
+  "archive_narrative_date_max": "2025-11-17",
+  "archive_duplicate_ids_in_window": 0,
+  "official_file": "data/raw/complaints.csv.zip",
+  "official_rows": 18621136,
+  "window": [
+    "2018-01-01",
+    "2023-12-31"
+  ],
+  "archive_narratives_in_window": 1445816,
+  "matched": 1445608,
+  "unmatched": 208,
+  "match_rate": 0.999856,
+  "date_mismatches_among_matched": 0,
+  "output": "data/interim/matched.parquet"
+}
