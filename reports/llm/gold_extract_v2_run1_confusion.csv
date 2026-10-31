@@ -1,0 +1,10 @@
+gold,true,false,null,field
+true,59,2,27,prior_contact_with_company
+false,0,0,0,prior_contact_with_company
+null,0,0,12,prior_contact_with_company
+true,11,4,3,requested_refund_or_reimbursement
+false,0,10,9,requested_refund_or_reimbursement
+null,2,31,30,requested_refund_or_reimbursement
+true,20,7,0,fee_or_charge_dispute
+false,5,65,1,fee_or_charge_dispute
+null,0,2,0,fee_or_charge_dispute

@@ -249,7 +249,79 @@ Observations from the 15 highest-scored false positives and the 15 lowest-scored
 - **Incomplete company masking.** The masked ablation still contains some company names, so it does not fully separate text understanding from company identity.
 - **Deduplication changes the population.** Removing exact duplicates raised the test base rate from 2.53% to 4.16%. The `raw_queue` results are reported for this reason.
 - **No real review process.** No human reviewers, review times or interventions were observed. There was no online test.
-- **No large language model is used.** The models are TF-IDF and logistic regression. Sentence embeddings were planned as an optional extra step and were not run.
+- **No large language model in the triage model.** The models are TF-IDF and logistic regression. Sentence embeddings were planned as an optional extra step and were not run. The separate LLM module below only extracts fields and is evaluated on its own.
+
+## LLM module: structured extraction and its reliability
+
+This module was added after the 2023 test set had been opened. It does not change any result above, it never reads 2023 data, and its output is not fed into the triage model. The full plan, labeling rules and prompt logs are in `docs/LLM_MODULE.md`.
+
+**Task.** Claude Haiku 5.5 (`claude-haiku-5-5` through the Anthropic API, thinking off) reads one narrative and returns JSON that must pass a fixed schema:
+
+- `amounts_mentioned`: every dollar amount, copied as written;
+- three fields that are `true`, `false` or `null`: the consumer already contacted the company, the consumer asks for money back, the complaint disputes a specific fee or charge.
+
+Each `true` or `false` must come with a quote that appears word for word in the narrative. `null` is allowed and is preferred to a guess. Every output is checked by code: the schema, whether each quote is really in the text, and the amounts against a regex baseline.
+
+**Data and labels.** The narratives are capped at 3,000 characters and sampled by product.
+
+- **Prompt development:** 50 narratives from the 2022 validation year.
+- **Gold set:** 100 narratives, 50 more from 2022 and 50 from a 2024 sample, labeled by hand against written rules without seeing any model output.
+- **Labeling history:** my first labeling pass used `false` for "not mentioned", against the rules. It was discarded and redone before the model had seen any gold item.
+- **Self-agreement:** three days later I relabeled 20 gold items in a new order.
+
+**Freeze.** Three prompt versions were compared on the 50 development items only. Version 2 was frozen by hash in `reports/llm/frozen_prompt.json` before the gold set was run. The gold set was scored once, and a lock file records when.
+
+### Results on the 100 gold items
+
+| Field | Gold `true` | Precision | Recall | F1 (95% CI) | Model `null` | Gold `null` |
+|---|---|---|---|---|---|---|
+| Contacted the company before | 88 | 1.00 | 0.67 | 0.80 (0.72–0.87) | 39% | 12% |
+| Asks for money back | 18 | 0.85 | 0.61 | 0.71 (0.48–0.87) | 42% | 63% |
+| Disputes a fee or charge | 27 | 0.80 | 0.74 | 0.77 (0.62–0.88) | 1% | 2% |
+
+Precision, recall and F1 treat `true` as the positive class. The intervals come from 2,000 bootstrap resamples and are wide because there are only 100 items.
+
+| Check | Result |
+|---|---|
+| Outputs that passed the schema | 200 of 200 calls (two runs), none needed a retry |
+| `true`/`false` values whose quote is an exact substring of the narrative | 96.3% (97.2% with a case-insensitive match) |
+| Dollar amounts, same set as the regex baseline | 99 of 100 items |
+| Agreement between two identical runs | 0.97 / 0.94 / 0.97 |
+| My own agreement with myself, 20 items relabeled three days later | 1.00 / 0.85 / 0.90 |
+| Prompt sensitivity on dev, frozen v2 against v1 | 0.96 / 0.74 / 0.94 |
+| Prompt sensitivity on dev, frozen v2 against v3 | 0.94 / 0.78 / 0.92 |
+| Mean tokens per narrative | 2,099 in, 160 out |
+| Cost | $0.29 per 1,000 narratives; $0.10 for the whole module |
+| Latency, one call at a time | median 1.22 s, 95th percentile 1.54 s |
+
+Agreement values are listed in field order: contact, money back, fee. They count `true`, `false` and `null` as three separate answers.
+
+### Failure analysis
+
+There were 93 field-level disagreements with the gold labels, out of 300. I put 30 of them, in a fixed random order, into categories in `reports/llm/gold_errors.csv`:
+
+| Field | Category | Errors |
+|---|---|---|
+| Asks for money back | Over-reading: the model answered where the text states no wish | 15 |
+| Asks for money back | Right passage, rule applied wrongly | 6 |
+| Asks for money back | Missed a statement that is in the text | 1 |
+| Contacted the company before | Missed a statement that is in the text | 6 |
+| Disputes a fee or charge | Right passage, rule applied wrongly | 2 |
+
+- **Asks for money back.** The model reads a stated outcome into narratives that state none: it answered `false` on 31 of the 63 items I labeled `null`. This field also has the lowest agreement between my own two passes, 0.85, so some of these errors may be label noise that I did not tag as ambiguous.
+- **Contacted the company before.** The model is cautious. It was never wrong when it said `true`, but it returned `null` on 27 of the 88 items where I found contact.
+- **Disputes a fee or charge.** Against the CFPB Issue field, the model's `true` answers sit in fee, billing and transaction issues. On the two credit-report issues, "Incorrect information on your report" and "Improper use of your report", it said `true` once in 29 items.
+- **Quotes.** The quote check confirms that a quote exists in the text, not that it supports the answer. On the development set it caught one case where the "quote" was copied from the prompt's own instructions.
+
+### Limitations of the LLM module
+
+- 100 gold items labeled by one person, me, against my own rules. Another reader could draw the lines differently. Only 18 items are `true` for money back, so that F1 is very uncertain.
+- One model, one prompt family and one setting. No other model was compared.
+- Only narratives up to 3,000 characters. The sample is stratified by product, so pooled numbers do not describe the full complaint stream.
+- The quote check is only a check that the quote exists. Whether the quote supports the answer was judged by hand, and only for the 30 errors above.
+- The extracted fields are not used by the triage model. This module makes no claim that an LLM improves triage.
+- I read the provider's data-use terms after the 20-item smoke run on the development set had started, not before it.
+- API responses are cached under `data/`, which is not committed, so reproducing the scores needs an API key. Both gold runs cost about $0.06.
 
 ## Reproduce
 
@@ -278,9 +350,23 @@ python scripts/08_error_analysis.py
 
 The current official export changes daily, so a fresh download will not match the 2026-10-23 file exactly.
 
+LLM module, after the steps above. It needs an Anthropic API key in the environment variable `ANTHROPIC_API_KEY`; never put the key in a file inside the repository. `reports/llm_eval_opened.lock` is committed, so the last command needs `--force`, and forced runs are logged.
+
+```
+pip install -r requirements-llm.txt
+python scripts/09a_llm_match_2024.py
+python scripts/09_llm_sample.py
+python scripts/11a_llm_restore_labels.py
+python scripts/10_llm_extract.py --set gold --prompt prompts/extract_v2.md --run 1
+python scripts/10_llm_extract.py --set gold --prompt prompts/extract_v2.md --run 2
+python scripts/11_llm_eval.py --set gold --prompt-version extract_v2 --run 1 --force
+```
+
+Because the official export changes, a fresh `09_llm_sample.py` may not pick exactly the same 100 items; `11a_llm_restore_labels.py` stops if the sample differs.
+
 ### Tests
 
-`pytest -q` runs 23 tests:
+`pytest -q` runs 50 tests: 23 for the triage pipeline and 27 for the LLM module. The triage tests cover:
 
 - Precision and recall at k, lift and PR-AUC, checked against hand-computed examples.
 - Cost curve endpoints, the cost-minimising threshold, and tie handling.
@@ -289,12 +375,16 @@ The current official export changes daily, so a fresh download will not match th
 - Label mapping, which errors on an unknown category.
 - Redaction removal, near-duplicate detection, and company masking boundaries.
 
+The LLM tests cover the schema validator, the quote check, amount parsing, the cache keys and budget cap with a fake API client, and the agreement and F1 metrics.
+
 ## Repository layout
 
 ```
-scripts/        one script per pipeline step, numbered in run order
+scripts/        one script per pipeline step, numbered in run order; 09 to 12 are the LLM module
 src/triage/     labels, text cleaning, dedup, split, leakage check, features, metrics, cost model
+src/triage/llm/ schema, quote check, amounts, prompt loading, cache, budget cap, API client, metrics
+prompts/        LLM prompt versions; extract_v2 is frozen
 tests/          pytest suite
-docs/           data provenance
-reports/        tables, figures, frozen thresholds, results.json
+docs/           data provenance, LLM module plan and log
+reports/        tables, figures, frozen thresholds, results.json; reports/llm/ for the LLM module
 ```

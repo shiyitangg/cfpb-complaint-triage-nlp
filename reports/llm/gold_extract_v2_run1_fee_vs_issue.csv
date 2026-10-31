@@ -1,0 +1,33 @@
+issue,false,null,true
+Attempts to collect debt not owed,8,0,1
+Charged fees or interest you didn't expect,0,0,1
+Closing on a mortgage,0,0,1
+Closing your account,1,0,1
+Confusing or missing disclosures,1,0,0
+Dealing with your lender or servicer,3,0,1
+Didn't provide services promised,0,1,0
+False statements or representation,1,0,0
+Fees or interest,0,0,2
+Fraud or scam,1,0,1
+Getting a credit card,1,0,2
+Getting the loan,1,0,0
+Improper use of your report,11,0,0
+Incorrect information on your report,17,0,1
+Managing an account,5,0,4
+Managing the loan or lease,2,0,0
+"Other features, terms, or problems",0,0,1
+Other transaction problem,1,0,1
+Problem when making payments,1,0,0
+Problem with a company's investigation into an existing problem,2,0,0
+Problem with a credit reporting company's investigation into an existing problem,4,0,0
+Problem with a lender or other company charging your account,0,0,2
+Problem with a purchase shown on your statement,0,0,1
+Problems at the end of the loan or lease,1,0,0
+Repossession,1,0,0
+Struggling to pay mortgage,1,0,0
+Struggling to pay your loan,1,0,1
+Took or threatened to take negative or legal action,1,0,0
+Trouble during payment process,3,0,2
+Trouble using the card,2,0,1
+Unexpected or other fees,1,0,1
+Written notification about debt,3,0,0

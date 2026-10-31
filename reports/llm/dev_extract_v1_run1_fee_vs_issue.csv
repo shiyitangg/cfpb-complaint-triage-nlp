@@ -1,0 +1,24 @@
+issue,false,null,true
+"Advertising and marketing, including promotional offers",1,0,1
+Applying for a mortgage or refinancing an existing mortgage,0,0,1
+Attempts to collect debt not owed,1,0,1
+Closing your account,0,0,1
+Dealing with your lender or servicer,1,1,1
+False statements or representation,1,0,0
+Fraud or scam,1,0,0
+Getting a credit card,1,0,0
+Getting a loan or lease,0,0,1
+Improper use of your report,9,1,0
+Incorrect information on your report,1,0,2
+Managing an account,3,0,3
+"Managing, opening, or closing your mobile wallet account",1,0,0
+Problem with a credit reporting company's investigation into an existing problem,3,0,0
+Problem with a purchase shown on your statement,0,0,1
+Problems at the end of the loan or lease,1,0,0
+Received a loan you didn't apply for,1,0,0
+Struggling to pay mortgage,2,0,1
+Struggling to pay your loan,0,0,1
+Took or threatened to take negative or legal action,1,0,0
+Trouble using the card,1,0,0
+Unauthorized transactions or other transaction problem,1,0,1
+Written notification about debt,2,0,1

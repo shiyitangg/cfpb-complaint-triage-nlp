@@ -1,0 +1,10 @@
+{
+  "provider": "anthropic",
+  "model": "claude-haiku-5-5",
+  "thinking": "disabled",
+  "max_tokens": 1024,
+  "prompt_version": "extract_v2",
+  "prompt_sha256": "1630702e36bf049b8bdabf4267e4aafdd4518e9772f624d2c31309fc122df0f4",
+  "schema_sha256": "578e9f7ea1cc1238d7ad23ba344954e34c4f00f59e72fba024f835800a6d1bf0",
+  "frozen_at_utc": "2026-10-26T00:59:49.102393+00:00"
+}

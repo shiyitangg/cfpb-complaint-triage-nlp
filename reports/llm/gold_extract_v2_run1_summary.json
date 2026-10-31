@@ -1,0 +1,42 @@
+{
+  "items": 100,
+  "schema_valid_rate": 1.0,
+  "needed_retry_rate": 0.0,
+  "null_rate_model": {
+    "prior_contact_with_company": 0.39,
+    "requested_refund_or_reimbursement": 0.42,
+    "fee_or_charge_dispute": 0.01
+  },
+  "evidence_exact_rate_nonnull": 0.963302752293578,
+  "evidence_exact_or_loose_rate_nonnull": 0.9724770642201835,
+  "amounts": {
+    "items": 100,
+    "exact_set_match": 0.99,
+    "values_pred": 70,
+    "values_regex": 69,
+    "precision_vs_regex": 0.9857142857142858,
+    "recall_vs_regex": 1.0,
+    "amount_strings": 80,
+    "unparsed_strings": 4,
+    "strings_found_verbatim": 0.9875
+  },
+  "cost_per_1000_items_usd": 0.290078,
+  "latency_median_s": 1.2238342495002144,
+  "latency_p95_s": 1.53640485415126,
+  "tokens_mean": {
+    "input": 2098.73,
+    "output": 160.41
+  },
+  "run_to_run_agreement": {
+    "prior_contact_with_company": 0.97,
+    "requested_refund_or_reimbursement": 0.94,
+    "fee_or_charge_dispute": 0.97
+  },
+  "self_agreement": {
+    "items": 20,
+    "prior_contact_with_company": 1.0,
+    "requested_refund_or_reimbursement": 0.85,
+    "fee_or_charge_dispute": 0.9
+  },
+  "errors": 93
+}
